@@ -58,15 +58,16 @@ def prime_number_in_range(lower_limit,upper_limit):
   return print(f'The prime numbers between {lower_limit} and {upper_limit} is {list_of_prime_numbers}')
 
 #Interface to check prime-ness of a single number or of numbers within a given range
-    if __name__ == '__main__':
-    choice = input('Do you want to find the prime-ness of a single number (Yes) or of a range of numbers (No): ')
-    
-    if choice.lower() == 'yes' :
-      user_input_value = input("Enter your Number: ")
-      prime_number_calculator(int(user_input_value))
-    elif choice.lower() == 'no':
-      lower_value = input("Enter the lower limit of the range whose prime-ness you want to calculate: ")
-      upper_value = input("Enter the upper limit of the range whose prime-ness you want to calculate: ")
-      prime_number_in_range(int(lower_value),int(upper_value))
-    else:
-      print('Incorrect value given !')
+if __name__ == '__main__':
+  
+  choice = input('Do you want to find the prime-ness of a single number (Yes) or of a range of numbers (No): ')
+  
+  if choice.lower() == 'yes' :
+    user_input_value = input("Enter your Number: ")
+    prime_number_calculator(int(user_input_value))
+  elif choice.lower() == 'no':
+    lower_value = input("Enter the lower limit of the range whose prime-ness you want to calculate: ")
+    upper_value = input("Enter the upper limit of the range whose prime-ness you want to calculate: ")
+    prime_number_in_range(int(lower_value),int(upper_value))
+  else:
+    print('Incorrect value given !')
